@@ -12,11 +12,20 @@ import udem.edu.co.entity.Insumos;
 
 /**
  *
+<<<<<<< HEAD
  * @author Jordana Apolinario
  */
 @Stateless
 public class InsumosFacade extends AbstractFacade<Insumos> {
     @PersistenceContext(unitName = "tiendaudem__pm")
+=======
+ * @author Maritza
+ */
+@Stateless
+public class InsumosFacade extends AbstractFacade<Insumos> {
+
+    @PersistenceContext(unitName = "InventarioTiendaUdemPU")
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
     private EntityManager em;
 
     @Override

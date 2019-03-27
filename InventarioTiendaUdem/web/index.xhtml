@@ -1,12 +1,14 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui" >
     <h:head>
         <title>Facelet Title</title>
         <h:outputStylesheet name="css/jsfcrud.css"/>
     </h:head>
     <h:body>
+<<<<<<< HEAD
         Hello from Facelets
         <br />
         <h:link outcome="/insumos/List" value="Show All Insumos Items"/>
@@ -14,6 +16,26 @@
         <h:link outcome="/producto/List" value="Show All Producto Items"/>
         <br />
         <h:link outcome="/usuarios/List" value="Show All Usuarios Items"/>
+=======
+       <h:form>
+            <center>
+                <p:fieldset legend="Iniciar Sesión">
+                    <p:panelGrid columns="2">
+                        
+                        <img src="resources/imagen/round-account-button-with-user-inside_icon-icons.com_72596.png" alt=""/>
+                        <p:inputText id="txtUsuario" value="#{indexController.current.username}" required="true"/>
+                        <img src="resources/imagen/icons8-lock-30.png" alt=""/>
+                        <p:password  id="txtPass" value="#{indexController.current.password}" required="true"/>
+                    </p:panelGrid>
+                    <p:commandButton value="Log in" action="#{indexController.iniciarSesion()}"/>
+
+                </p:fieldset>
+
+            </center>
+
+
+        </h:form>
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
     </h:body>
 
 

@@ -10,9 +10,16 @@ import javax.persistence.EntityManager;
 
 /**
  *
+<<<<<<< HEAD
  * @author Jordana Apolinario
  */
 public abstract class AbstractFacade<T> {
+=======
+ * @author Maritza
+ */
+public abstract class AbstractFacade<T> {
+
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
     private Class<T> entityClass;
 
     public AbstractFacade(Class<T> entityClass) {

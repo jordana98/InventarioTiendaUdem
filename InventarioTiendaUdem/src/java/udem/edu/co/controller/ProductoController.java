@@ -8,8 +8,13 @@ import udem.edu.co.facade.ProductoFacade;
 import java.io.Serializable;
 import java.util.ResourceBundle;
 import javax.ejb.EJB;
+<<<<<<< HEAD
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+=======
+import javax.inject.Named;
+import javax.enterprise.context.SessionScoped;
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
@@ -18,7 +23,11 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
 
+<<<<<<< HEAD
 @ManagedBean(name = "productoController")
+=======
+@Named("productoController")
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
 @SessionScoped
 public class ProductoController implements Serializable {
 
@@ -188,6 +197,13 @@ public class ProductoController implements Serializable {
         return JsfUtil.getSelectItems(ejbFacade.findAll(), true);
     }
 
+<<<<<<< HEAD
+=======
+    public Producto getProducto(java.lang.Integer id) {
+        return ejbFacade.find(id);
+    }
+
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
     @FacesConverter(forClass = Producto.class)
     public static class ProductoControllerConverter implements Converter {
 
@@ -198,7 +214,11 @@ public class ProductoController implements Serializable {
             }
             ProductoController controller = (ProductoController) facesContext.getApplication().getELResolver().
                     getValue(facesContext.getELContext(), null, "productoController");
+<<<<<<< HEAD
             return controller.ejbFacade.find(getKey(value));
+=======
+            return controller.getProducto(getKey(value));
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
         }
 
         java.lang.Integer getKey(String value) {

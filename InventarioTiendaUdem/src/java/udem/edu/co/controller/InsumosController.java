@@ -8,8 +8,13 @@ import udem.edu.co.facade.InsumosFacade;
 import java.io.Serializable;
 import java.util.ResourceBundle;
 import javax.ejb.EJB;
+<<<<<<< HEAD
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+=======
+import javax.inject.Named;
+import javax.enterprise.context.SessionScoped;
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
@@ -18,7 +23,11 @@ import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import javax.faces.model.SelectItem;
 
+<<<<<<< HEAD
 @ManagedBean(name = "insumosController")
+=======
+@Named("insumosController")
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
 @SessionScoped
 public class InsumosController implements Serializable {
 
@@ -188,6 +197,13 @@ public class InsumosController implements Serializable {
         return JsfUtil.getSelectItems(ejbFacade.findAll(), true);
     }
 
+<<<<<<< HEAD
+=======
+    public Insumos getInsumos(java.lang.Integer id) {
+        return ejbFacade.find(id);
+    }
+
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
     @FacesConverter(forClass = Insumos.class)
     public static class InsumosControllerConverter implements Converter {
 
@@ -198,7 +214,11 @@ public class InsumosController implements Serializable {
             }
             InsumosController controller = (InsumosController) facesContext.getApplication().getELResolver().
                     getValue(facesContext.getELContext(), null, "insumosController");
+<<<<<<< HEAD
             return controller.ejbFacade.find(getKey(value));
+=======
+            return controller.getInsumos(getKey(value));
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
         }
 
         java.lang.Integer getKey(String value) {

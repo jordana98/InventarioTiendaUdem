@@ -6,8 +6,13 @@
         <property name="portNumber" value="3306"/>
         <property name="databaseName" value="tiendaudem"/>
         <property name="User" value="root"/>
+<<<<<<< HEAD
         <property name="Password" value="Lady"/>
         <property name="URL" value="jdbc:mysql://localhost:3306/tiendaudem"/>
+=======
+        <property name="Password" value="945340520"/>
+        <property name="URL" value="jdbc:mysql://localhost:3306/tiendaudem?zeroDateTimeBehavior=convertToNull"/>
+>>>>>>> d62c4ae19cdfaff10d5664dd4e7e992b8a37facc
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
     </jdbc-connection-pool>
     <jdbc-resource enabled="true" jndi-name="tiendaudem" object-type="user" pool-name="mysql_tiendaudem_rootPool"/>
