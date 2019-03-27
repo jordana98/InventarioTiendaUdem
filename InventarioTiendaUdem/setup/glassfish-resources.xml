@@ -7,7 +7,7 @@
         <property name="databaseName" value="tiendaudem"/>
         <property name="User" value="root"/>
         <property name="Password" value="Lady"/>
-        <property name="URL" value="jdbc:mysql://localhost:3306/tiendaudem?zeroDateTimeBehavior=convertToNull"/>
+        <property name="URL" value="jdbc:mysql://localhost:3306/tiendaudem"/>
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
     </jdbc-connection-pool>
     <jdbc-resource enabled="true" jndi-name="tiendaudem" object-type="user" pool-name="mysql_tiendaudem_rootPool"/>
